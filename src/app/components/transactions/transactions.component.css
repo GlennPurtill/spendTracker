@@ -1,0 +1,14 @@
+.col-1{
+    /* background-color: aqua; */
+    height: 1vh;
+}
+.row {
+    height: 85vh;
+  }
+
+  .modal{
+      font-size: 14px;
+  }
+  .form-group{
+      padding: 2px;
+  }

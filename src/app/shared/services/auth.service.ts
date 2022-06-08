@@ -85,6 +85,7 @@ export class AuthService {
   }
   // Sign in with Google
   GoogleAuth() {
+    console.log("test")
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
       if (res) {
         this.router.navigate(['dashboard']);

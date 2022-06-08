@@ -1,1 +1,61 @@
 <app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="row align-items-end">
+      <div class="col-11">
+      </div>
+      <div class="col-1 text-center">
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">+</button>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Insert an expense</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Description</label>
+                  <input type="text" class="form-control form-control-sm" [(ngModel)]="description" name="description" id="recipient-name">
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Cost</label>
+                    <input type="text" class="form-control form-control-sm" [(ngModel)]="cost" name="cost"  id="recipient-name">
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Currency</label>
+                    <select class="form-control form-control-sm" [(ngModel)]="currency" name="currency" >
+                        <option>Euro</option>
+                        <option>CAD</option>
+                        <option>USD</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Type</label>
+                    <select class="form-control form-control-sm" [(ngModel)]="type" name="type" >
+                        <option>Food</option>
+                        <option>Rent</option>
+                        <option>Misc</option>
+                        <option>Subscriptions</option>
+                        <option>Apparal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Note</label>
+                    <textarea class="form-control form-control-sm" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="note" name="note" ></textarea>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="this.test()" data-dismiss="modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
