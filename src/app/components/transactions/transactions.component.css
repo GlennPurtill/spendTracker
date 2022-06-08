@@ -2,8 +2,8 @@
     /* background-color: aqua; */
     height: 1vh;
 }
-.row {
-    height: 85vh;
+.container-fluid {
+    height: 94vh;
   }
 
   .modal{
@@ -11,4 +11,8 @@
   }
   .form-group{
       padding: 2px;
+  }
+  .col-4{
+      /* background-color: blue; */
+      padding-top: 10px;
   }

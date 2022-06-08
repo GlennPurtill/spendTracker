@@ -1,9 +1,30 @@
 <app-navbar></app-navbar>
 <div class="container-fluid">
-    <div class="row align-items-end">
-      <div class="col-11">
+    <div class="row align-items-start">
+      <div class="col-8 border">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Description</th>
+              <th scope="col">Cost</th>
+              <th scope="col">Currency</th>
+              <th scope="col">Type</th>
+              <th scope="col">Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of items | async">
+              <td> {{ item.description | json }}</td>
+              <td> {{ item.cost | json }}</td>
+              <td> {{ item.currency | json }}</td>
+              <td> {{ item.type | json }}</td>
+              <td> {{ item.note | json }}</td>
+              <!-- <div class="fa fa-pencil fa-fwmodal-btn" (click)="updateEditingValueStocks(item); open(content)"></div> -->
+            </tr> 
+          </tbody>
+        </table>
       </div>
-      <div class="col-1 text-center">
+      <div class="col-4 text-center border">
         <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalCenter">+</button>
       </div>
     </div>
