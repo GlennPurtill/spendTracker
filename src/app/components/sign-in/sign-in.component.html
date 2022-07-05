@@ -1,16 +1,40 @@
 <div class="container-fluid displayTable">
     <div class="row align-items-center displayTableCell">
-      <div class="col-3"></div>
-      <div class="col-6 authBlock border rounded text-center">
-        <h3>Sign In</h3>
+      <div class="col-6">
+        <img src="https://thumbs.dreamstime.com/b/rich-stylish-business-male-spending-money-vector-flat-illustration-businessman-throwing-out-banknotes-wallet-rich-stylish-190752650.jpg">
+      </div>
+      <div class="col-6 authBlock rounded text-center">
+        <h2>Welcome to <a class="logo">SpendTracker</a></h2>
         <div class="formGroup">
-          <button type="button" class="btn googleBtn btn-secondary btn-lg" (click)="authService.GoogleAuth()">
-            <i class="fab fa-google-plus-g"></i>
-            Log in with Google
+          <button class="button" type="button" class="btn googleBtn btn-secondary btn-lg" (click)="authService.GoogleAuth1(); loadingCircles();">
+            Sign in with <a id="color1">G</a><a id="color2">o</a><a id="color3">o</a><a id="color4">g</a><a id="color5">l</a><a id="color6">e</a>
           </button>
         </div>
+        <div id="loadingCircles" class="loadingDiv fixed-bottom" style="display:none">
+          <div class="spinner-grow spinner-grow-sm text-primary delay1" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow spinner-grow-sm text-secondary delay2" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow spinner-grow-sm text-success delay3" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow spinner-grow-sm text-danger delay4" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow spinner-grow-sm text-warning delay5" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow spinner-grow-sm text-info delay6" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <div class="spinner-grow spinner-grow-sm text-light delay7" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
       </div>
-      <div class="col-3"></div>
+      <!-- <div class="col-3"></div> -->
     </div>
   </div>
   

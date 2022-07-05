@@ -7,8 +7,15 @@ import { AuthService } from "../../shared/services/auth.service";
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
+  
   constructor(
     public authService: AuthService
   ) { }
   ngOnInit() { }
+  loadingCircles(){
+    const lC = document.getElementById('loadingCircles');
+    if(lC!=null){
+      lC.style.display="block";
+    }
+  }
 }
